@@ -8,7 +8,7 @@ const usuariosGet = (req, res = response) => {
     query
   });
 }
-
+//este es otro comentario xD
 const usuariosPut =(req, res = response) => {
   const {id} = req.params;
 
