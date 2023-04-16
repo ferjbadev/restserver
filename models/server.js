@@ -13,7 +13,7 @@ class Server{
     this.conectarDB();
 
     // Middlewares: son funciones que le agregan otra funcion al servidor web, es una funcion que siempre se ejecuta cuando se levanta el servidor
-    this.middlewares();
+    // this.middlewares();
     // Rutas de mi aplicacion
     this.routes();
   }
@@ -21,16 +21,16 @@ class Server{
     await dbConection();
   }
 
-  middlewares(){
-    //Cors
-    this.app.use(cors());
+  // middlewares(){
+  //   //Cors
+  //   this.app.use(cors());
 
-    //Lectura y parseo del body
-    this.app.use(express.json);
+  //   //Lectura y parseo del body
+  //   this.app.use(express.json);
 
-    //Directorio publico
-    this.app.use(express.static('public'));
-  }
+  //   //Directorio publico
+  //   this.app.use(express.static('public'));
+  // }
 
   routes(){
     this.app.use(this.usuariosPath, require('../routes/usuarios'));
