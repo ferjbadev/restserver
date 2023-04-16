@@ -5,12 +5,7 @@ const dbConection = async() => {
 
   try{
 
-    await mongoose.connect(process.env.ferbDB, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-      useCreateIndex: true,
-      useFindAndModify: false
-    });
+    await mongoose.connect(process.env.ferbDB);
 
     console.log('La base de datos esta online!!'.green)
     
